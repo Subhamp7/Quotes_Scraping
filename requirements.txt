@@ -1,7 +1,8 @@
-Flask==1.1.2
+flask==1.1.2
 gunicorn==19.9.0
 itsdangerous==1.1.0
 Jinja2==2.10.1
 MarkupSafe==1.1.1
 Werkzeug==0.15.5
-
+bs4==4.9.1
+requests==2.23.0
