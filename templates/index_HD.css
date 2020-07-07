@@ -3,8 +3,11 @@
   }
 
   .heart__analysis__container {
-    display: contents;
+	background-image: url(background.jpg);
+	
   }
+  
+
 
   .form {
     margin-top: 2rem;
@@ -20,8 +23,7 @@
 
   .header {
     text-align: center;
-    color: #4255d6;
-    font-weight: 400;
+
   }
 
   .contact {
@@ -44,10 +46,7 @@
     margin-right: 1rem;
   }
 
-  .title {
-    font-size: 46px;
-  }
-  
+
   input[type=text],input[type=number], select, textarea {
     width: 100%;
     padding: 0.6rem 1rem;

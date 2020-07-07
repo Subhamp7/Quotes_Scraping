@@ -15,7 +15,6 @@ def home():
     input_topic=request.args['topic']
     return quotes_list(input_topic)
     
-
 if __name__ == "__main__":
     app.run()
     
