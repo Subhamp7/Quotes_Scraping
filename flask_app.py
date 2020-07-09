@@ -10,12 +10,19 @@ from scrap_quote import quotes_list
 
 app=Flask(__name__)
 
+
 @app.route('/')
+
 def home():
-    input_topic=request.args['topic']
-    return quotes_list(input_topic)
+    return render_template('home.html')
     
+@app.route('/search' , methods=['GET', 'POST'])
+
+def search():
+    input_topic=request.args.get("topic")
+    return render_template('home.html', quotes_result= quotes_list(input_topic))
+
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True, use_reloader=False)
     
     
