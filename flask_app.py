@@ -7,9 +7,10 @@ Created on Tue Jul  7 18:05:45 2020
 
 from flask import Flask, request, render_template
 from scrap_quote import quotes_list
+from flask_cors import CORS
 
 app=Flask(__name__)
-
+CORS(app)
 
 @app.route('/')
 
