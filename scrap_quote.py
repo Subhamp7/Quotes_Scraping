@@ -6,27 +6,22 @@ Created on Tue Jul  7 15:28:54 2020
 """
 from requests import get
 from bs4 import BeautifulSoup
-import flask
+import re
 
-def quotes_list(topic):
-    quote_name=""
-    owner_name =""
-    dict={}
-    url_topic="https://www.brainyquote.com/search_results?q="+str(topic)
-    soup=BeautifulSoup((get(url_topic)).text, 'html.parser')
-    quotes=soup.find('div', id="quotesList")
+def quotes_list(topic,pages):
+    quotes=[]
     try:
-        for index in quotes:
-            try:
-                quote_name=index.div.div.div.a.text
-                try:
-                    owner_name=index.div.div.div.div.a.text
-                except: 
-                    owner_name=None
-                dict[quote_name]=owner_name
-            except:
-                pass
+        for index in range(1,pages,1):
+            url_topic="https://www.goodreads.com/search?page={}&q={}&qid=FpMJ3rkiq0&search_type=quotes&tab=quotes&utf8=%E2%9C%93".format(index,topic)
+            soup=BeautifulSoup((get(url_topic)).text, 'html.parser')
+            quotes_all=soup.find_all('div', class_="quoteText")
+            
+            for index_1 in quotes_all:
+                data_text=re.sub(r'\s+',' ',index_1.text)
+                if(len(data_text)<200):
+                    quotes.append(data_text)
+        if(len(quotes)==0):
+            quotes=["Oops no results"]
     except:
-        dict={}
-    return dict
-
+        quotes=["Oops no results"]
+    return quotes 
