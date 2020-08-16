@@ -4,23 +4,26 @@
   <meta charset="UTF-8">
   <link href="/static/home.css" rel="stylesheet">
   
-  <title>Quotess</title>
+  <title>Quotes</title>
+  <link rel = "icon" href = "/static/quote.png" >
 	
 </head>
 
-<body class="heart__analysis__container" >
+<body class="quote__container" >
 
 	 <h1 class="header">
-		 <img src="/static/quote.png" />	 
+		 <a href="/" ><img src="/static/quote.png" /></a>	 
 	 </h1>
-
 	 
+	
 	 <div class="form__container">
     <form action="{{ url_for('search')}}" method="post" class="form">
+	
+		<p style="font-style:italic;font-size: large" >
+			Hi!! I am Quote Scrapper <br> Just type a word and I will get you many Quotes containing that word.
+		</p>
 		
 		<div class="row">
-			<div class="col-25">
-			</div>
 			<div class="col-75">
 				<input type="text" name="topic" placeholder="Type here" required="required" autocomplete="off"/>
 			</div>
@@ -32,14 +35,6 @@
 		
 	</form>
 	
-	<script>
-	
-		Object.keys(quotes_result).forEach(function(key) {
-		var value = quotes_result[key];
-		// ...
-		});
-	
-	</script>
 </div>
 <div class='footer'>
 	<div class="contact">
