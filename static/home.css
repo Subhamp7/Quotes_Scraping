@@ -25,6 +25,14 @@
     padding: 2rem;
   }
 
+
+.form_result_search{
+    margin-top: 2rem;
+	border-radius: 100px;
+    padding: 2rem;
+  }
+
+
   .form__container {
     display: flex;
     justify-content: center;
@@ -58,7 +66,16 @@
 
   input[type=text],input[type=number], select, textarea {
     width: 100%;
-    padding: 0.6rem 1rem;
+    padding: 0.8rem 2rem;
+    border: 1px solid #ccc;
+    border-radius: 22px;
+    resize: vertical;
+    outline: none;
+  }
+  
+  input[type=text_1],input[type=number], select, textarea {
+    width: 11%;
+    padding: 0.9rem 1rem;
     border: 1px solid #ccc;
     border-radius: 22px;
     resize: vertical;
@@ -102,12 +119,6 @@
     /* background-image: url("bg.jpg"); */
   }
   
-  .col-25 {
-    float: left;
-    width: 25%;
-    margin-top: 6px;
-  }
-  
   .col-75 {
     float: left;
     width: 100%;
@@ -127,14 +138,11 @@
     clear: both;
   }
 
-  .heart__icon {
-    margin-right: 1.4rem;
-  }
   .analyse__btn {
     background: #eaeaea;
     outline: none;
     border: 1ox solid black;
-    padding: 0.8rem 3rem;
+    padding: 0.4rem 3rem;
     border-radius: 1.8rem;
     cursor: pointer;
     border: 1px solid #fff8f8;
@@ -151,14 +159,6 @@
       justify-content: center;
       margin-top: 2rem;
   }
-  
-  .prediction__text {
-    text-align: center;
-    color: #190e0e;
-    font-size: 20px;
-    position: relative;
-    top: 0.4rem;
-}
 
 #result_table {
     margin: 1em auto;
