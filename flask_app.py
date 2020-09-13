@@ -18,7 +18,7 @@ def home():
 @app.route('/search' , methods=['GET', 'POST'])
 def search():
     input_topic=request.form['topic']
-    return render_template('result.html', quotes_result= quotes_list(input_topic,10))
+    return render_template('home.html', quotes_result= quotes_list(input_topic,5))
 
 if __name__ == "__main__":
     app.run(debug=True, use_reloader=False)
