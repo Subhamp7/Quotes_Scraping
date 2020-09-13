@@ -21,7 +21,7 @@ def quotes_list(topic,pages):
                 if(len(data_text)<200):
                     quotes.append(data_text)
         if(len(quotes)==0):
-            quotes=["Oops no results"]
+            quotes=["Oops no quotes found with the word {} results".format(topic)]
     except:
         quotes=["Oops no results"]
     return quotes 
