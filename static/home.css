@@ -137,13 +137,19 @@
       margin-top: 2rem;
   }
   
- 
-
-#result_table {
-    margin: 1em auto;
-    width: 75%;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
+
+.btn-group,.btn-group-vertical {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+
+.input-group {
+    border-collapse: separate;
+    display: table;
+}
+
   /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
   @media screen and (max-width: 600px) {
     .col-25, .col-75, input[type=submit] {
